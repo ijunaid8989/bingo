@@ -9,7 +9,6 @@ defmodule Bingo.Buzzwords do
   """
   def read_buzzwords do
     "buzzwords.csv"
-    |> Path.expand(__DIR__)
     |> File.read!()
     |> String.split("\n", trim: true)
     |> Enum.map(&String.split(&1, ","))
