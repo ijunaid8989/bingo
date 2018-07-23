@@ -8,7 +8,7 @@ defmodule Bingo.Buzzwords do
     * `:points` - the point value
   """
   def read_buzzwords do
-    "../../data/buzzwords.csv"
+    "buzzwords.csv"
     |> Path.expand(__DIR__)
     |> File.read!()
     |> String.split("\n", trim: true)
